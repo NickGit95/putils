@@ -1,7 +1,7 @@
 #+TITLE: Readme
 
 * AWS Parameter Store Utilities
-I created this project to make parameter store management more manageable from the command line.
+I created this project to make parameter store management easier from the command line.
 This is my first python project so expect it to not be perfect.
 
 ** Dependencies and instalation

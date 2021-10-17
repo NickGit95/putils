@@ -1,10 +1,9 @@
-#+TITLE: Readme
+#+TITLE: AWS Parameter Store Utilities
 
-* AWS Parameter Store Utilities
 I created this project to make parameter store management easier from the command line.
 This is my first python project so expect it to not be perfect.
 
-** Dependencies and instalation
+* Dependencies and instalation
 The recomended way to install this project is using pip inside a virtual environment with venv (for now)
 Python 3 is mandatory for this application to run correctly.
 #+begin_src shell
@@ -16,7 +15,7 @@ To activate the virtual environment run the activation script
 source environment/bin/activate
 #+end_src
 
-** Usage
+* Usage
 putils uses the click package to handle commands arguments and options.
 #+begin_src shell
 putils --help

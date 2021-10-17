@@ -8,10 +8,13 @@ This is my first python project so expect it to not be perfect.
 The recomended way to install this project is using pip inside a virtual environment with venv (for now)
 Python 3 is mandatory for this application to run correctly.
 #+begin_src shell
-python -m venv
+python -m venv environment
 python -m pip install .
 #+end_src
-To activate the
+To activate the virtual environment run the activation script
+#+begin_src shell
+source environment/bin/activate
+#+end_src
 
 ** Usage
 putils uses the click package to handle commands arguments and options.

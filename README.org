@@ -1,0 +1,55 @@
+#+TITLE: Readme
+
+* AWS Parameter Store Utilities
+I created this project to make parameter store management more manageable from the command line.
+This is my first python project so expect it to not be perfect.
+
+** Dependencies and instalation
+The recomended way to install this project is using pip inside a virtual environment with venv (for now)
+Python 3 is mandatory for this application to run correctly.
+#+begin_src shell
+python -m venv
+python -m pip install .
+#+end_src
+To activate the
+
+** Usage
+putils uses the click package to handle commands arguments and options.
+#+begin_src shell
+putils --help
+Usage: putils [OPTIONS] COMMAND [ARGS]...
+
+  Various utilities to work with AWS parameter store.
+
+Options:
+  -r, --region TEXT  The AWS region to use.
+  -v, --verbose      Enables verbose mode.
+  --help             Show this message and exit.
+
+Commands:
+  delete  Delete a parameter hierachy.
+  edit    Search for a particular parameter and then edit the value of it.
+  grep    Search for matches on the parameter values from a hierarchy path.
+  put     Create a new parameter or overwrite an existing one.
+  search  Return the names of parameters that match a certain pattern
+#+end_src
+A AWS region must be set using the -r option before running any command. If -r is not set, then us-east-2 would be use as the parameter region.
+#+begin_src shell
+putils -r us-east-1 search foo
+#+end_src
+
+Each subcommand has different options and arguments. Use the --help option to get more information for each command.
+For example:
+#+begin_src shell
+putils grep --help
+Usage: putils grep [OPTIONS] PATH PATTERN
+
+  Search for matches on the parameter values from a hierarchy path.
+
+Options:
+  -l, --files-with-matches  Only show the parameter names and not the matched
+                            lines.
+  --help                    Show this message and exit.
+#+end_src
+
+The put an edit commands will open the default terminal text editor, so make sure to have one installed before running these commands.

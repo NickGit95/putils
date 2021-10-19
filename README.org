@@ -16,7 +16,7 @@ source environment/bin/activate
 #+end_src
 
 * Usage
-putils uses the click package to handle commands arguments and options.
+putils uses the click package to handle commands, arguments and options.
 #+begin_src shell
 putils --help
 Usage: putils [OPTIONS] COMMAND [ARGS]...
@@ -35,12 +35,12 @@ Commands:
   put     Create a new parameter or overwrite an existing one.
   search  Return the names of parameters that match a certain pattern
 #+end_src
-A AWS region must be set using the -r option before running any command. If -r is not set, then us-east-2 would be use as the parameter region.
+A region flag must be set using the -r option before running any command. If -r is not set, then us-east-2 would be used as the parameter region.
 #+begin_src shell
 putils -r us-east-1 search foo
 #+end_src
 
-Each subcommand has different options and arguments. Use the --help option to get more information for each command.
+Each subcommand has different options and arguments. Use the --help option to get more information about each command.
 For example:
 #+begin_src shell
 putils grep --help
@@ -54,4 +54,4 @@ Options:
   --help                    Show this message and exit.
 #+end_src
 
-The put an edit commands will open the default terminal text editor, so make sure to have one installed before running these commands.
+The put an edit commands will open the default terminal text editor; make sure to have one installed (vim, nano, nvim) before running these commands.

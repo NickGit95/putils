@@ -5,7 +5,7 @@ setup(
     version="0.0.1",
     packages=["putils", "putils.commands"],
     include_package_data=True,
-    install_requires=["click", "boto3", "moto"],
+    install_requires=["click", "boto3"],
     tests_requires=["pytest"],
     entry_points="""
         [console_scripts]

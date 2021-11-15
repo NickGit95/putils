@@ -12,6 +12,7 @@ def aws_credentials():
     os.environ["AWS_SECURITY_TOKEN"] = "testing"
     os.environ["AWS_SESSION_TOKEN"] = "testing"
     os.environ["AWS_DEFAULT_REGION"] = "us-east-2"
+    os.environ["EDITOR"] = "vim"
 
 
 @pytest.fixture(scope="module")
@@ -42,9 +43,81 @@ def init_params(ssm):
             "DataType": "text",
         },
         {
-            "Name": "test3",
+            "Name": "/dev/test3",
             "Description": "name",
-            "Value": "testing",
+            "Value": "Lorem ipsum",
+            "Type": "String",
+            "Overwrite": True,
+            "Tier": "Standard",
+            "DataType": "text",
+        },
+        {
+            "Name": "/dev/test4",
+            "Description": "name",
+            "Value": "ipsum testing",
+            "Type": "String",
+            "Overwrite": True,
+            "Tier": "Standard",
+            "DataType": "text",
+        },
+        {
+            "Name": "/dev/Delete",
+            "Description": "name",
+            "Value": "Delete this",
+            "Type": "String",
+            "Overwrite": True,
+            "Tier": "Standard",
+            "DataType": "text",
+        },
+        {
+            "Name": "param1",
+            "Description": "name",
+            "Value": "Example",
+            "Type": "String",
+            "Overwrite": True,
+            "Tier": "Standard",
+            "DataType": "text",
+        },
+        {
+            "Name": "param2",
+            "Description": "name",
+            "Value": "Example",
+            "Type": "String",
+            "Overwrite": True,
+            "Tier": "Standard",
+            "DataType": "text",
+        },
+        {
+            "Name": "param3",
+            "Description": "name",
+            "Value": "Example",
+            "Type": "String",
+            "Overwrite": True,
+            "Tier": "Standard",
+            "DataType": "text",
+        },
+        {
+            "Name": "param4",
+            "Description": "name",
+            "Value": "Example",
+            "Type": "String",
+            "Overwrite": True,
+            "Tier": "Standard",
+            "DataType": "text",
+        },
+        {
+            "Name": "param5",
+            "Description": "name",
+            "Value": "Example",
+            "Type": "String",
+            "Overwrite": True,
+            "Tier": "Standard",
+            "DataType": "text",
+        },
+        {
+            "Name": "param6",
+            "Description": "name",
+            "Value": "Example",
             "Type": "String",
             "Overwrite": True,
             "Tier": "Standard",

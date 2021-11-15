@@ -9,6 +9,8 @@ parameter-utils = {editable = true, path = "."}
 [dev-packages]
 pytest = "*"
 moto = "*"
+pyyaml = "*"
+pytest-cov = "*"
 
 [requires]
 python_version = "3.9"
